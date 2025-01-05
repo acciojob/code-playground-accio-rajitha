@@ -20,11 +20,11 @@ const App = () => {
   return (
     <Router>
       <div className="main-container">
-        <p>{isAuthenticated ? 'Logged in, Now you can enter Code Playground' : 'You are not authenticated, Please login first'}</p>
+        <p>{isAuthenticated ? 'Logged in, Now you can enter Playground' : 'You are not authenticated, Please login first'}</p>
         <nav>
           <ul>
             <li>
-              <Link to="/playground">Playground</Link>
+              <Link to="/playground">PlayGround</Link>
             </li>
             <li>
               <Link to="/login">Login</Link>
@@ -40,10 +40,9 @@ const App = () => {
             />} 
           />
           <Route path="/playground" element={
-            isAuthenticated ? <Playground /> : <Navigate to="/not-found" replace />
+           isAuthenticated ? <Playground /> : <Navigate to="/login" replace />
           } />
-          <Route path="/not-found" element={<div>Page not Found</div>} />
-          <Route path="*" element={<Navigate to="/login" replace />} />
+          <Route path="*" element={<div className="main-container">Page Not Found</div>} />
         </Routes>
       </div>
     </Router>
