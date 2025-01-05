@@ -1,5 +1,4 @@
 // src/LoginPage.js
-// src/LoginPage.js
 import React from 'react';
 
 const LoginPage = ({ isAuthenticated, handleLogin, handleLogout }) => {
