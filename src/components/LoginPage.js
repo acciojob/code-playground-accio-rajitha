@@ -7,7 +7,7 @@ const LoginPage = ({ isAuthenticated, handleLogin, handleLogout }) => {
     <div className="main-container">
       <p>Login</p>
       {!isAuthenticated ? (
-        <button onClick={handleLogin}>Log in</button>
+        <button onClick={handleLogin}>Log In</button>
       ) : (
         <>
           
